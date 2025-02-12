@@ -7,6 +7,8 @@ import { Suspense } from 'react';
 import Category from './Category';
 import EditCategory from './EditCategory';
 import AddProduct from './AddProduct';
+import Product from './Product';
+import EditProduct from './EditProduct';
 
 function AppRouter() {
 	const baseURL = 'http://localhost:8089/';
@@ -44,6 +46,15 @@ function AppRouter() {
 				<Route
 					path='/admin/product/add'
 					element={<AddProduct categories={categories} products={products} />}
+				/>
+				<Route
+					path='/admin/product'
+					element={<Product products={products} />}
+				/>
+
+				<Route
+					path='/admin/product/:id'
+					element={<EditProduct products={products} categories={categories} />}
 				/>
 			</Routes>
 		</Router>
