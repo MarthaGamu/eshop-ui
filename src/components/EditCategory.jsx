@@ -48,43 +48,48 @@ export default function EditCategory({ categories }) {
 	};
 
 	return (
-		<div>
-			<h2>Edit Category</h2>
-			<form onSubmit={updateCategory}>
-				<input
-					type='text'
-					name='categoryName'
-					placeholder='Category Name'
-					value={categoryName}
-					onChange={(e) => {
-						setCategoryName(e.target.value);
-					}}
-				/>
-				<br />
-				<textarea
-					type='text'
-					name='description'
-					placeholder='Description'
-					value={description}
-					onChange={(e) => {
-						setDescription(e.target.value);
-					}}
-				/>
-				<br />
-				<input
-					type='url'
-					name='imageUrl'
-					placeholder='Image Url'
-					value={imageUrl}
-					onChange={(e) => {
-						setImageUrl(e.target.value);
-					}}
-				/>
-				<br />
-				<button type='submit' onClick={updateCategory}>
-					Update Category
-				</button>
-			</form>
+		<div className='container'>
+			<div className='form-wrapper'>
+				<h2>Edit Category</h2>
+				<form onSubmit={updateCategory}>
+					<input
+						className='input-field'
+						type='text'
+						name='categoryName'
+						placeholder='Category Name'
+						value={categoryName}
+						onChange={(e) => {
+							setCategoryName(e.target.value);
+						}}
+					/>
+					<br />
+					<textarea
+						className='input-field'
+						type='text'
+						name='description'
+						placeholder='Description'
+						value={description}
+						onChange={(e) => {
+							setDescription(e.target.value);
+						}}
+					/>
+					<br />
+					<input
+						className='input-field'
+						type='url'
+						name='imageUrl'
+						placeholder='Image Url'
+						value={imageUrl}
+						onChange={(e) => {
+							setImageUrl(e.target.value);
+						}}
+					/>
+					<br />
+					<button type='submit' onClick={updateCategory}>
+						Update Category
+					</button>
+				</form>
+			</div>
 		</div>
 	);
 }

@@ -55,7 +55,7 @@ export default function EditProduct({ products, categories }) {
 			<form onSubmit={updateProduct}>
 				<label>Category</label>
 				<select
-					className='form-control'
+					className='input-field'
 					value={categoryId}
 					onChange={(e) => {
 						setCategoryId(e.target.value);
@@ -71,6 +71,7 @@ export default function EditProduct({ products, categories }) {
 					))}
 				</select>
 				<input
+					className='input-field'
 					type='text'
 					name='name'
 					placeholder='Name'
@@ -81,6 +82,7 @@ export default function EditProduct({ products, categories }) {
 				/>
 				<br />
 				<textarea
+					className='input-field'
 					type='text'
 					name='description'
 					placeholder='Description'
@@ -91,6 +93,7 @@ export default function EditProduct({ products, categories }) {
 				/>
 				<br />
 				<input
+					className='input-field'
 					type='url'
 					name='imageUrl'
 					placeholder='Image URL'
@@ -100,6 +103,7 @@ export default function EditProduct({ products, categories }) {
 					}}
 				/>
 				<input
+					className='input-field'
 					type='number'
 					name='price'
 					placeholder='Price'

@@ -6,13 +6,15 @@ export default function Product({ products }) {
 	const location = useLocation();
 	return (
 		<div>
-			{location.pathname === '/admin/product/' && (
-				<Link id='add-product' to='/admin/product/add'>
-					<button>Add a new Product</button>
-				</Link>
-			)}
+			<div className='heading-wrapper'>
+				{location.pathname === '/admin/product/' && (
+					<Link id='add-product' to='/admin/product/add'>
+						<button>Add a new Product</button>
+					</Link>
+				)}
+			</div>
 
-			<div>
+			<div className='card-wrapper'>
 				{products.map((productData) => {
 					return <ProductBox product={productData} />;
 				})}

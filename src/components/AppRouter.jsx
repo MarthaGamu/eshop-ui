@@ -33,7 +33,10 @@ function AppRouter() {
 		<Router>
 			<Suspense fallback={<div>Loading</div>}></Suspense>
 			<Routes>
-				<Route path='/' element={<Home />} />
+				<Route
+					path='/'
+					element={<Home categories={categories} products={products} />}
+				/>
 				<Route path='/admin/category/add' element={<AddCategory />} />
 				<Route
 					path='/admin/category'

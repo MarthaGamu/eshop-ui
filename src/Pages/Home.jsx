@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ProductBox from '../components/ProductBox';
 import CategoryBox from '../components/CategoryBox';
+import '../App.css';
 
 export default function Home({ products, categories }) {
 	const [categorySize, setCategorySize] = useState(0);
