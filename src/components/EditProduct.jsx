@@ -51,72 +51,75 @@ export default function EditProduct({ products, categories }) {
 		}
 	};
 	return (
-		<div>
-			<form onSubmit={updateProduct}>
-				<label>Category</label>
-				<select
-					className='input-field'
-					value={categoryId}
-					onChange={(e) => {
-						setCategoryId(e.target.value);
-					}} // Update state when selection changes
-					required
-				>
-					<option value=''>Select a category</option>{' '}
-					{/* Default empty option */}
-					{categories.map((category) => (
-						<option key={category.id} value={category.id}>
-							{category.categoryName}
-						</option>
-					))}
-				</select>
-				<input
-					className='input-field'
-					type='text'
-					name='name'
-					placeholder='Name'
-					value={name}
-					onChange={(e) => {
-						setName(e.target.value);
-					}}
-				/>
-				<br />
-				<textarea
-					className='input-field'
-					type='text'
-					name='description'
-					placeholder='Description'
-					value={description}
-					onChange={(e) => {
-						setDescription(e.target.value);
-					}}
-				/>
-				<br />
-				<input
-					className='input-field'
-					type='url'
-					name='imageUrl'
-					placeholder='Image URL'
-					value={imageURL}
-					onChange={(e) => {
-						setImageUrl(e.target.value);
-					}}
-				/>
-				<input
-					className='input-field'
-					type='number'
-					name='price'
-					placeholder='Price'
-					value={price}
-					onChange={(e) => {
-						setPrice(e.target.value);
-					}}
-				/>
-				<br />
-				<button onClick={updateProduct} type='submit'>
-					Add Product
-				</button>
-			</form>
+		<div className='container'>
+			<div className='form-wrapper'>
+				<form onSubmit={updateProduct}>
+					<select
+						className='input-field'
+						value={categoryId}
+						onChange={(e) => {
+							setCategoryId(e.target.value);
+						}} // Update state when selection changes
+						required
+					>
+						<option value=''>Select a category</option>{' '}
+						{/* Default empty option */}
+						{categories.map((category) => (
+							<option key={category.id} value={category.id}>
+								{category.categoryName}
+							</option>
+						))}
+					</select>
+					<br />
+					<input
+						className='input-field'
+						type='text'
+						name='name'
+						placeholder='Name'
+						value={name}
+						onChange={(e) => {
+							setName(e.target.value);
+						}}
+					/>
+					<br />
+					<textarea
+						className='input-field'
+						type='text'
+						name='description'
+						placeholder='Description'
+						value={description}
+						onChange={(e) => {
+							setDescription(e.target.value);
+						}}
+					/>
+					<br />
+					<input
+						className='input-field'
+						type='url'
+						name='imageUrl'
+						placeholder='Image URL'
+						value={imageURL}
+						onChange={(e) => {
+							setImageUrl(e.target.value);
+						}}
+					/>
+					<br />
+					<input
+						className='input-field'
+						type='number'
+						name='price'
+						placeholder='Price'
+						value={price}
+						onChange={(e) => {
+							setPrice(e.target.value);
+						}}
+					/>
+					<br />
+					<button onClick={updateProduct} type='submit'>
+						Add Product
+					</button>
+				</form>
+			</div>
 		</div>
 	);
 }
