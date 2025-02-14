@@ -59,6 +59,10 @@ function AppRouter() {
 					path='/admin/product/:id'
 					element={<EditProduct products={products} categories={categories} />}
 				/>
+				<Route
+					path='/admin/product'
+					element={<Product products={products} categories={categories} />}
+				/>
 			</Routes>
 		</Router>
 	);

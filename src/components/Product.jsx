@@ -7,13 +7,13 @@ export default function Product({ products }) {
 	return (
 		<div>
 			<div className='heading-wrapper'>
-				{location.pathname === '/admin/product/' && (
-					<Link id='add-product' to='/admin/product/add'>
-						<button>Add a new Product</button>
+				<h1>Our Products</h1>
+				{location.pathname === '/admin/category/add' && (
+					<Link id='add-category' to='/admin/category/add'>
+						<button>Add a new product</button>
 					</Link>
 				)}
 			</div>
-
 			<div className='card-wrapper'>
 				{products.map((productData) => {
 					return <ProductBox product={productData} />;

@@ -4,7 +4,9 @@ import '../App.css';
 export default function Navbar() {
 	return (
 		<div className='navbar'>
-			<div className='logo'>Toe Trends.</div>
+			<div className='logo' style={{ fontSize: '35px', fontWeight: '700' }}>
+				Toe Trends.
+			</div>
 			<div>
 				<a id='product-page' href='/admin/product'>
 					Product

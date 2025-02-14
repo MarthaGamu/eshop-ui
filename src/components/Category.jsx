@@ -7,7 +7,7 @@ export default function Category({ categories }) {
 	return (
 		<>
 			<div className='heading-wrapper'>
-				<h2>Our categories of Brands</h2>
+				<h1>Our Brand categories</h1>
 				{location.pathname === '/admin/category/add' && (
 					<Link id='add-category' to='/admin/category/add'>
 						<button>Add a new Category</button>

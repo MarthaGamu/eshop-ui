@@ -7,7 +7,7 @@ export default function EditProduct({ products, categories }) {
 	const [imageURL, setImageUrl] = useState('');
 	const [name, setName] = useState('');
 	const [price, setPrice] = useState('');
-	const [categoryId, setCategoryId] = useState(1);
+	const [categoryId, setCategoryId] = useState();
 	//const formData = { categoryId, description, imageURL, name, price };
 	const { id } = useParams();
 
@@ -29,7 +29,14 @@ export default function EditProduct({ products, categories }) {
 
 	const updateProduct = async (e) => {
 		e.preventDefault();
-		const updatedProduct = { categoryId, description, imageURL, name, price };
+		const updatedProduct = {
+			id,
+			categoryId,
+			description,
+			imageURL,
+			name,
+			price
+		};
 		console.log('updatedProduct', updatedProduct);
 		try {
 			const response = await axios.post(

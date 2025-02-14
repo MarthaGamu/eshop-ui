@@ -25,7 +25,7 @@ export default function EditCategory({ categories }) {
 
 	const updateCategory = async (e) => {
 		e.preventDefault();
-		const updatedCategory = { categoryName, description, imageUrl };
+		const updatedCategory = { id, categoryName, description, imageUrl };
 		console.log('updatedCategory', updatedCategory);
 		try {
 			const response = await axios.post(
